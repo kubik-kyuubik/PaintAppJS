@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #4A98F7;
+}
+body .container {
+  display: flex;
+  width: 100%;
+  max-width: 1050px;
+  gap: 10px;
+  padding: 10px;
+}
+body .container section {
+  background: #fff;
+  border-radius: 7px;
+}
+body .container .tools-board {
+  width: 210px;
+  padding: 15px 22px 0;
+}
+body .container .tools-board .row {
+  margin-bottom: 20px;
+}
+body .container .tools-board .row .options {
+  list-style: none;
+  margin: 10px 0 0 5px;
+}
+body .container .tools-board .row .options .option {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+body .container .tools-board .row .options .option span, body .container .tools-board .row .options .option label {
+  color: #5A6168;
+  padding-left: 10px;
+  cursor: pointer;
+}
+body .container .tools-board .row .options .option #fill-color {
+  height: 14px;
+  width: 14px;
+  cursor: pointer;
+}
+body .container .tools-board .row .options .option #fill-color:checked ~ label {
+  color: #4A98F7;
+}
+body .container .tools-board .row .options .option #size-slider {
+  width: 100%;
+  height: 5px;
+  margin-top: 10px;
+}
+body .container .tools-board .row .options .option:is(:hover, .active) img {
+  filter: invert(17%) sepia(90%) saturate(3000%) hue-rotate(900deg) brightness(100%) contrast(100%);
+}
+body .container .tools-board .row .options .option:is(:hover, .active) span, body .container .tools-board .row .options .option:is(:hover, .active) label {
+  color: #4A98F7;
+}
+body .container .tools-board .colors .options {
+  display: flex;
+  justify-content: space-between;
+}
+body .container .tools-board .colors .options .option {
+  height: 20px;
+  width: 20px;
+  background: red;
+  border-radius: 50%;
+  margin-top: 3px;
+  position: relative;
+}
+body .container .tools-board .colors .options .option #color-picker {
+  opacity: 0;
+  cursor: pointer;
+}
+body .container .tools-board .colors .options .option.selected:before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  height: 12px;
+  width: 12px;
+  background: inherit;
+  border-radius: inherit;
+  border: 2px solid #fff;
+  transform: translate(-50%, -50%);
+}
+body .container .tools-board .colors .options .option:first-child.selected::before {
+  border-color: #ccc;
+}
+body .container .tools-board .colors .options .option:nth-child(1) {
+  background: #fff;
+  border: 1px solid #bfbfbf;
+}
+body .container .tools-board .colors .options .option:nth-child(2) {
+  background: #000;
+}
+body .container .tools-board .colors .options .option:nth-child(3) {
+  background: #E02020;
+}
+body .container .tools-board .colors .options .option:nth-child(4) {
+  background: #6DD400;
+}
+body .container .tools-board .colors .options .option:nth-child(5) {
+  background: #4A98F7;
+}
+body .container .tools-board .buttons button {
+  width: 100%;
+  color: #fff;
+  border: none;
+  outline: none;
+  padding: 11px 0;
+  font-size: 0.9rem;
+  margin-bottom: 13px;
+  background: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+body .container .tools-board .buttons .clear-canvas {
+  color: #6C757D;
+  border: 1px solid #6C757D;
+  transition: all 0.3s ease;
+}
+body .container .tools-board .buttons .clear-canvas:hover {
+  color: #fff;
+  background: #6C757D;
+}
+body .container .tools-board .buttons .save-img {
+  background: #4A98F7;
+  border: 1px solid #4A98F7;
+}
+body .container .drawing-board {
+  flex: 1;
+}
+
+/*# sourceMappingURL=style.css.map */

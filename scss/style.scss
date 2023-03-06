@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #4A98F7;
+    .container {
+        display: flex;
+        width: 100%;
+        max-width: 1050px;
+        gap: 10px;
+        padding: 10px;
+        section {
+            background: #fff;
+            border-radius: 7px;    
+        }
+        .tools-board {
+            width: 210px;
+            padding: 15px 22px 0;
+            .row {
+                margin-bottom: 20px;
+                .options {
+                    list-style: none;
+                    margin: 10px 0 0 5px;
+                    .option {
+                        display: flex;
+                        align-items: center;
+                        cursor: pointer;
+                        margin-bottom: 10px;                        
+                        span, label {
+                            color: #5A6168;
+                            padding-left: 10px;
+                            cursor: pointer;
+                        }
+                        #fill-color {
+                            height: 14px;
+                            width: 14px;
+                            cursor: pointer;                                                      
+                        }
+                        #fill-color:checked ~ label {
+                            color:#4A98F7; 
+                        }
+                        #size-slider {
+                            width: 100%;
+                            height: 5px;
+                            margin-top: 10px;
+                        }
+                    }
+                    .option:is(:hover, .active) {
+                        img {
+                            filter: invert(17%) sepia(90%) saturate(3000%) hue-rotate(900deg) brightness(100%) contrast(100%);
+                        }
+                        span, label {
+                            color: #4A98F7;
+                        }
+                    }
+                }
+            }
+            .colors {
+                .options {
+                    display: flex;
+                    justify-content: space-between;
+                    .option {
+                        height: 20px;
+                        width: 20px;
+                        background: red;
+                        border-radius: 50%;
+                        margin-top: 3px;
+                        position: relative;
+                        #color-picker {
+                            opacity: 0;
+                            cursor: pointer;
+                        }
+                    }
+                    .option.selected:before {
+                        position: absolute;
+                        content: "";
+                        top: 50%;
+                        left: 50%;
+                        height: 12px;
+                        width: 12px;
+                        background: inherit;
+                        border-radius: inherit;
+                        border: 2px solid #fff;
+                        transform: translate(-50%, -50%);
+                    }
+                    .option:first-child.selected::before {
+                        border-color: #ccc;
+                    }
+                    .option:nth-child(1) {
+                        background: #fff;
+                        border: 1px solid #bfbfbf;
+                    }
+                    .option:nth-child(2) {
+                        background: #000;
+                    }
+                    .option:nth-child(3) {
+                        background: #E02020;
+                    }
+                    .option:nth-child(4) {
+                        background: #6DD400;
+                    }
+                    .option:nth-child(5) {
+                        background: #4A98F7;
+                    }
+                }                
+            }
+            .buttons {
+                button {
+                    width: 100%;
+                    color: #fff;
+                    border: none;
+                    outline: none;
+                    padding: 11px 0;
+                    font-size: 0.9rem;
+                    margin-bottom: 13px;
+                    background: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                }
+                .clear-canvas {
+                    color: #6C757D;
+                    border: 1px solid #6C757D;
+                    transition: all 0.3s ease;
+                }
+                .clear-canvas:hover {
+                    color: #fff;
+                    background: #6C757D;
+                }
+                .save-img {
+                    background: #4A98F7;
+                    border: 1px solid #4A98F7;
+                }
+            }
+        }
+        .drawing-board {
+            flex: 1;
+        }    
+    }
+}
