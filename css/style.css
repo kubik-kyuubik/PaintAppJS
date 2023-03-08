@@ -97,20 +97,20 @@ body .container .tools-board .colors .options .option:first-child.selected::befo
   border-color: #ccc;
 }
 body .container .tools-board .colors .options .option:nth-child(1) {
-  background: #fff;
+  background-color: #fff;
   border: 1px solid #bfbfbf;
 }
 body .container .tools-board .colors .options .option:nth-child(2) {
-  background: #000;
+  background-color: #000;
 }
 body .container .tools-board .colors .options .option:nth-child(3) {
-  background: #E02020;
+  background-color: #E02020;
 }
 body .container .tools-board .colors .options .option:nth-child(4) {
-  background: #6DD400;
+  background-color: #6DD400;
 }
 body .container .tools-board .colors .options .option:nth-child(5) {
-  background: #4A98F7;
+  background-color: #4A98F7;
 }
 body .container .tools-board .buttons button {
   width: 100%;
