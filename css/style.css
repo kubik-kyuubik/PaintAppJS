@@ -140,5 +140,9 @@ body .container .tools-board .buttons .save-img {
 body .container .drawing-board {
   flex: 1;
 }
+body .container .drawing-board canvas {
+  width: 100%;
+  height: 100%;
+}
 
 /*# sourceMappingURL=style.css.map */
